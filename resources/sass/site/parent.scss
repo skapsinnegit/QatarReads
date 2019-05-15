@@ -1,0 +1,117 @@
+.dashboard{
+	ul.parent-menu{
+		list-style-type: none;
+		justify-content: center;
+		display: flex;
+		padding: 0;
+		li{
+			margin: 0 10px;
+			display: inline-block;
+			a{
+				width: 150px;
+				text-align: center;
+				padding: 15px 10px;
+				color: #333;
+				background-color: #fff;
+				border-radius: $border-radius;
+				display: block;
+				&.active, &:hover{
+					color: #fff;
+					text-decoration: none;
+					background-color: $brand-primary;
+					i{
+						color: #fff;
+					}
+				}
+				i{
+					padding-right: 5px;
+					color: #333;
+				}
+			}
+		}
+	}
+	.panel{
+		margin-top: 30px;
+		.panel-heading{
+			background-color: #fff;
+			padding: 20px;
+			font-size: 24px;
+			color: #333;
+			border-bottom: 3px solid #f6f8fa;
+			i{
+				padding-right: 10px;
+				font-size: 20px;
+				color: $brand-primary;
+			}
+		}
+		.panel-body{
+			padding: 10px;
+			background-color: #fff;
+			.border-sub-panel{
+				border-right: 2px solid #efefef;
+			} 
+			.sub-panel{
+				padding: 20px;
+				height: 100%;
+				.title-section{
+					margin-bottom: 20px;				
+				}
+				.title{
+					font-size: 18px;
+				}
+				a{
+					color: $brand-primary;
+					text-decoration: none;
+					&.action-btn{
+						padding: 2px 10px;
+						font-size: 12px;
+					}
+				}
+				table{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 557px){
+	.dashboard ul.parent-menu{
+		display: none;
+	}
+}
+@media screen and (max-width: 850px){
+	.dashboard ul.parent-menu li a{
+		width: auto;
+		padding: 10px 15px;
+	}
+}
+
+
+///Data table custom styles
+	// .dataTables_length, .dataTables_filter, .dataTables_info, .dataTables_paginate.paging_simple_numbers{
+	// 	display: none;
+	// }
+	// table.dataTable.no-footer{
+	// 	border-bottom: none;
+	// }
+	// table.dataTable thead th, table.dataTable thead td{
+	// 	padding: 10px !important;
+	// }
+	div.dataTables_wrapper div.dataTables_info{
+		padding-top: 0 !important;
+	}
+	table.table-bordered.dataTable th, table.table-bordered.dataTable td{
+		font-size: 13px;
+	}
+
+	.pagination .page-item.active .page-link{
+		border-color: $brand-primary;
+		background-color: $brand-primary;
+		color: #fff !important;
+	}
+	table.table-bordered thead th{
+    	border-bottom-width: 1px !important;
+    	border-top: none !important;
+	}
